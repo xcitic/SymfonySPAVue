@@ -2,6 +2,7 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
+        "csfix": "eslint assets/vue --ext .js,.vue, --fix",
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
@@ -24,7 +25,7 @@
         "vue-template-compiler": "^2.6.10",
         "webpack-notifier": "^1.6.0"
     },
-    "browserlist": [
+    "browserslist": [
         "> 0.5%",
         "last 2 versions",
         "Firefox ESR",
