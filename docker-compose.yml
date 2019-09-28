@@ -38,6 +38,16 @@ services:
       - mysql_data:/var/lib/mysql
       - ./services/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
 
+  mysql_tests:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "tests"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+    volumes:
+      - ./services/mysql/utf8mb4.cnf:/etc/mysql/conf.d/utf8mb4.cnf:ro
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7
     labels:
@@ -48,6 +58,8 @@ services:
       PMA_HOST: mysql
       PMA_USER: "$MYSQL_USER"
       PMA_PASSWORD: "$MYSQL_PASSWORD"
+
+
 
 volumes:
   mysql_data:
