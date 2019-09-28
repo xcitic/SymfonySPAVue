@@ -10,13 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class IndexController extends AbstractController
 {
-
   /**
    * @Route("/{req}", name="index", requirements={"req"="^(?!api|_(profiler|wdt)).*"})
-   * @return Response
    */
-  public function indexAction(): Response
-  {
-    return $this->render('base.html.twig', []);
-  }
+    public function indexAction(): Response
+    {
+        return $this->render('base.html.twig', []);
+    }
 }
