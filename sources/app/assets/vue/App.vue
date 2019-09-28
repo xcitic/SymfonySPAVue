@@ -4,7 +4,9 @@
       <router-link
         class="navbar-brand"
         to="/home"
-      />
+      >
+        App
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,6 +27,14 @@
             active-class="active"
           >
             <a class="nav-link">Home</a>
+          </router-link>
+          <router-link
+            class="nav-item"
+            tag="li"
+            to="/posts"
+            active-class="active"
+          >
+            <a class="nav-link">Posts</a>
           </router-link>
         </ul>
       </div>
