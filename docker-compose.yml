@@ -29,6 +29,8 @@ services:
 
   mysql:
     image: mysql:5.7
+    env_file:
+      - .env
     environment:
       MYSQL_ROOT_PASSWORD: "$MYSQL_ROOT_PASSWORD"
       MYSQL_DATABASE: "$MYSQL_DATABASE"
@@ -50,6 +52,8 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7
+    env_file:
+      - .env
     labels:
       - traefik.enable=true
       - traefik.backend=phpmyadmin

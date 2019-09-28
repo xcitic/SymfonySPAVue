@@ -45,7 +45,7 @@ final class PostController extends AbstractController
     {
         $message = $request->request->get('message');
         if (empty($message)) {
-            throw new BadRequestHttpException('Message can not be empty');
+           throw new BadRequestHttpException('message cannot be empty');
         }
         $post = new Post();
         $post->setMessage($message);
