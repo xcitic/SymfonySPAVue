@@ -33,7 +33,7 @@ class Post
     private $message;
 
   /**
-   * @ORM\Column(name="create", type="datetime")
+   * @ORM\Column(name="created", type="datetime")
    *
    * @var DateTime
    */
