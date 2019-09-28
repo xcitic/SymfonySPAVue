@@ -12,7 +12,7 @@ final class IndexController extends AbstractController
 {
 
   /**
-   * @Route("/", name="index")
+   * @Route("/{req}", name="index", requirements={"req"="^(?!api|_(profiler|wdt)).*"})
    * @return Response
    */
   public function indexAction(): Response

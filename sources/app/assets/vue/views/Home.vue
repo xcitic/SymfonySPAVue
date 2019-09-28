@@ -1,13 +1,13 @@
 <template>
-<div>
-  <div class="row col">
-    <h1>Home</h1>
-  </div>
+  <div>
+    <div class="row col">
+      <h1>Home</h1>
+    </div>
 
-  <div class="row col">
-    <p>Landing page is here</p>
+    <div class="row col">
+      <p>Landing page is here</p>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
