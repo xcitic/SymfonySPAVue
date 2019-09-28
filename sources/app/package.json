@@ -1,0 +1,33 @@
+{
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "vue": "^2.6.10"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.6.2",
+        "@babel/runtime": "^7.6.2",
+        "@symfony/webpack-encore": "^0.28.0",
+        "babel-eslint": "^10.0.3",
+        "core-js": "^3.0.0",
+        "eslint": "^6.4.0",
+        "eslint-loader": "^3.0.2",
+        "eslint-plugin-vue": "^5.2.3",
+        "regenerator-runtime": "^0.13.2",
+        "vue-loader": "^15.7.1",
+        "vue-template-compiler": "^2.6.10",
+        "webpack-notifier": "^1.6.0"
+    },
+    "browserlist": [
+        "> 0.5%",
+        "last 2 versions",
+        "Firefox ESR",
+        "not dead"
+    ]
+}
