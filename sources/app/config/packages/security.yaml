@@ -1,13 +1,28 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: auto
     providers:
-        in_memory: { memory: null }
+        in_memory: { memory: ~ }
+        pdo:
+            entity:
+                class: App\Entity\User
+                property: login
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
+
+            provider: pdo
+
+            json_login:
+                check_path: /api/security/login
+
+            logout:
+                path: /api/security/logout
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

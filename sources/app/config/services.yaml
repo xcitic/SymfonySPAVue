@@ -28,3 +28,13 @@ services:
     App\Exception\HTTPExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }
+
+    app.security.hash.password.listener:
+        class: App\Security\HashPasswordListener
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
+        arguments:
+            - !service { class: PDO, factory: 'database_connection:getWrappedConnection'}
+            - { lock_mode: 1 }
